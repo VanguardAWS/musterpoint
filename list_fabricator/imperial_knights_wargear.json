@@ -1,0 +1,14 @@
+{
+    "wargear": [
+        {
+            "name": "armiger autocannon",
+            "range": 60,
+            "type": "heavy 2D3",
+            "strength": 7,
+            "armor_penetration": 2,
+            "damage": 3,
+            "abilities": "-",
+            "point_value": 0
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "unit": [
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "armiger helverin",
+            "movement": 12,
+            "weapon_skill": 3,
+            "ballistic_skill": 3,
+            "strength": 6,
+            "toughness": 7,
+            "wounds": 12,
+            "attacks": 4,
+            "leadership": 8,
+            "armor_save": 3,
+            "abilities": "ion shields, code chivalric, armiger squadron, explodes",
+            "point_value": 155,
+            "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108015_IKArmigerHelverins01.jpg"
+        }
+    ]
+}
