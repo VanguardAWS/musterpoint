@@ -11,32 +11,35 @@
 <body>
     <h1>List Fabricator</h1>
     
-    <div id="app">
-        <div v-for="unit in imperialKnightsUnits">
+    <div id="api">
+        <div v-for="unit in imperialKnightsUnitsList">
+            <h3>[[unit.name]]</h3>
+            
+            <div v-for="weapon in unit.wargear">
+                <div v-for="wargear in imperialKnightsWargearList">
+                    <div v-if="weapon === wargear.name">
+                        [[wargear]]
+                    </div>
+                </div>
+            </div>
+
+            <img v-bind:src="[[unit.image]]"/>
+            <div v-for="weapon in unit.optional_wargear">
+                <div v-for="wargear in imperialKnightsWargearList">
+                    <div v-if="weapon === wargear.name">
+                        [[wargear]]
+                    </div>
+                </div>
+            </div>
+
+            <button v-on:click="addUnit">Add Unit</button>
+        </div>
+        <div v-for="unit in armyList">
             <h3>[[unit.name]]</h3>
             <img v-bind:src="[[unit.image]]"/>
+            <button v-on:click="removeUnit">Remove Unit</button>
         </div>
     </div>
 </body>
-<script>
-    let imperialKnightsUnits = new Vue({
-        el: '#app',
-        delimiters: ['[[', ']]'], // This is new
-        data: {
-        imperialKnightsUnits: [],
-        },
-        methods: {
-        getImperialKnightsUnits: function() {
-            axios({
-                method: 'GET',
-                url: '/api/units/',
-                
-            }).then(res => this.imperialKnightsUnits = res.data)
-        },       
-        },
-        beforeMount: function(){
-            this.getImperialKnightsUnits()
-        }
-    });
-</script>
+<script src="static/site.js"></script>
 </html>

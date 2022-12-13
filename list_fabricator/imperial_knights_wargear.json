@@ -2,11 +2,51 @@
     "wargear": [
         {
             "name": "armiger autocannon",
-            "range": 60,
+            "range": "60",
             "type": "heavy 2D3",
-            "strength": 7,
+            "strength": "7",
             "armor_penetration": 2,
-            "damage": 3,
+            "damage": "3",
+            "abilities": "-",
+            "point_value": 0
+        },
+        {
+            "name": "thermal spear",
+            "range": "30",
+            "type": "heavy 2",
+            "strength": "9",
+            "armor_penetration": 4,
+            "damage": "D6",
+            "abilities": "Each time an attack made with this weapon targets a unit within half range, that attack has a damage characteristic of D6+2.",
+            "point_value": 0
+        },
+        {
+            "name": "reaper chain-cleaver",
+            "range": "melee",
+            "type": "melee",
+            "strength": "+4",
+            "armor_penetration": 4,
+            "damage": "3",
+            "abilities": "-",
+            "point_value": 0
+        },
+        {
+            "name": "meltagun",
+            "range": "12",
+            "type": "assualt 1",
+            "strength": "8",
+            "armor_penetration": 4,
+            "damage": "D6",
+            "abilities": "Each time an attack made with this weapon targets a unit within half range, that attack has a damage characteristic of D6+2.",
+            "point_value": 5
+        },
+        {
+            "name": "ironhail heavy stubber",
+            "range": "36",
+            "type": "heavy 4",
+            "strength": "4",
+            "armor_penetration": 1,
+            "damage": "1",
             "abilities": "-",
             "point_value": 0
         }
