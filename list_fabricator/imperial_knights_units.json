@@ -48,6 +48,222 @@
                 "ironhail heavy stubber"
             ],
             "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108019_ImperialKnightsArmiger01.jpg"
+        },
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "knight errant",
+            "movement": 10,
+            "weapon_skill": 3,
+            "ballistic_skill": 3,
+            "strength": 8,
+            "toughness": 8,
+            "wounds": 24,
+            "attacks": 4,
+            "leadership": 9,
+            "armor_save": 3,
+            "abilities": "ion shields, super-heavy walker, errant's duty, code chivalric, explodes",
+            "point_value": 425,
+            "wargear": [
+                "thermal cannon",
+                "titanic feet"
+            ],
+            "optional_wargear": [
+                "meltagun",
+                "ironhail heavy stubber",
+                "reaper chainsword",
+                "thunderstrike gauntlet"
+            ],
+            "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108017_ErrantLead.jpg"
+        },
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "knight warden",
+            "movement": 10,
+            "weapon_skill": 3,
+            "ballistic_skill": 3,
+            "strength": 8,
+            "toughness": 8,
+            "wounds": 24,
+            "attacks": 4,
+            "leadership": 9,
+            "armor_save": 3,
+            "abilities": "ion shields, super-heavy walker, warden's duty, code chivalric, explodes",
+            "point_value": 435,
+            "wargear": [
+                "avenger gatling cannon",
+                "heavy flamer",
+                "titanic feet"
+            ],
+            "optional_wargear": [
+                "meltagun",
+                "ironhail heavy stubber",
+                "reaper chainsword",
+                "thunderstrike gauntlet"
+            ],
+            "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108017_WardenLead.jpg"
+        },
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "knight crusader",
+            "movement": 10,
+            "weapon_skill": 3,
+            "ballistic_skill": 3,
+            "strength": 8,
+            "toughness": 8,
+            "wounds": 24,
+            "attacks": 4,
+            "leadership": 9,
+            "armor_save": 3,
+            "abilities": "ion shields, super-heavy walker, crusader's duty, code chivalric, explodes",
+            "point_value": 485,
+            "wargear": [
+                "avenger gatling cannon",
+                "heavy flamer",
+                "titanic feet"
+            ],
+            "optional_wargear": [
+                "meltagun",
+                "ironhail heavy stubber",
+                "thermal cannon",
+                "rapid-fire battle cannon"
+            ],
+            "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108017_CrusaderLead.jpg"
+        },
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "knight gallant",
+            "movement": 12,
+            "weapon_skill": 2,
+            "ballistic_skill": 3,
+            "strength": 8,
+            "toughness": 8,
+            "wounds": 24,
+            "attacks": 4,
+            "leadership": 9,
+            "armor_save": 3,
+            "abilities": "ion shields, super-heavy walker, gallant's duty, code chivalric, explodes",
+            "point_value": 400,
+            "wargear": [
+                "reaper chainsword",
+                "thunderstrike gauntlet",
+                "titanic feet"
+            ],
+            "optional_wargear": [
+                "meltagun",
+                "ironhail heavy stubber"
+            ],
+            "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108017_GallantLead.jpg"
+        },
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "knight paladin",
+            "movement": 10,
+            "weapon_skill": 3,
+            "ballistic_skill": 3,
+            "strength": 8,
+            "toughness": 8,
+            "wounds": 24,
+            "attacks": 4,
+            "leadership": 9,
+            "armor_save": 3,
+            "abilities": "ion shields, super-heavy walker, paladin's duty, code chivalric, explodes",
+            "point_value": 425,
+            "wargear": [
+                "rapid-fire battle cannon",
+                "titanic feet"
+            ],
+            "optional_wargear": [
+                "reaper chainsword",
+                "thunderstrike gauntlet",
+                "meltagun",
+                "ironhail heavy stubber"
+            ],
+            "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108017_PaladinLead.jpg"
+        },
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "knight castellan",
+            "movement": 8,
+            "weapon_skill": 4,
+            "ballistic_skill": 3,
+            "strength": 8,
+            "toughness": 8,
+            "wounds": 28,
+            "attacks": 4,
+            "leadership": 9,
+            "armor_save": 2,
+            "abilities": "ion shields, super-heavy walker, code chivalric, explodes",
+            "point_value": 595,
+            "wargear": [
+                "plasma decimator",
+                "volcano lance",
+                "twin meltagun",
+                "titanic feet"
+            ],
+            "optional_wargear": [
+                "shieldbreaker missile",
+                "twin siegebreaker cannon"
+            ],
+            "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108016_IKCastellan01.jpg"
+        },
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "knight valiant",
+            "movement": 8,
+            "weapon_skill": 4,
+            "ballistic_skill": 3,
+            "strength": 8,
+            "toughness": 8,
+            "wounds": 28,
+            "attacks": 4,
+            "leadership": 9,
+            "armor_save": 2,
+            "abilities": "ion shields, super-heavy walker, code chivalric, explodes",
+            "point_value": 585,
+            "wargear": [
+                "conflagration cannon",
+                "thundercoil harpoon",
+                "twin meltagun",
+                "titanic feet"
+            ],
+            "optional_wargear": [
+                "shieldbreaker missile",
+                "twin siegebreaker cannon"
+            ],
+            "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108018_ImperialKnightValiant01.jpg"
+        },
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "canis rex",
+            "movement": 10,
+            "weapon_skill": 2,
+            "ballistic_skill": 2,
+            "strength": 8,
+            "toughness": 8,
+            "wounds": 24,
+            "attacks": 5,
+            "leadership": 9,
+            "armor_save": 3,
+            "abilities": "ion shields, super-heavy walker, mentor,, sir hekhtur, code chivalric, explodes, chainbreaker, legendary freeblade",
+            "point_value": 440,
+            "wargear": [
+                "hekhtur's pistol",
+                "las-impulsor",
+                "preceptor multi-laser",
+                "freedom's hand",
+                "titanic feet"
+            ],
+            "optional_wargear": [
+            ],
+            "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108017_PreceptorLead.jpg"
         }
     ]
 }

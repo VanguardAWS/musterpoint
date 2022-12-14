@@ -6,40 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>List Fabricator</title>
 </head>
 <body>
-    <h1>List Fabricator</h1>
     
-    <div id="api">
-        <div v-for="unit in imperialKnightsUnitsList">
-            <h3>[[unit.name]]</h3>
-            
-            <div v-for="weapon in unit.wargear">
-                <div v-for="wargear in imperialKnightsWargearList">
-                    <div v-if="weapon === wargear.name">
-                        [[wargear]]
+    <div class="container-md" id="api">
+        <h1 class="fs-1">List Fabricator</h1>
+        <div class="d-flex flex-wrap">
+            <div v-for="(unit,index) in imperialKnightsUnitsList">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <img class="card-img-top" v-bind:src="[[unit.image]]"/>
+                        <h3 class="card-title">[[unit.name]]</h3>
+                        <h6>[[unit.point_value]]</h6>
+                        <button v-on:click="addUnit(index)">Add Unit</button>
                     </div>
                 </div>
             </div>
-
-            <img v-bind:src="[[unit.image]]"/>
-            <div v-for="weapon in unit.optional_wargear">
-                <div v-for="wargear in imperialKnightsWargearList">
-                    <div v-if="weapon === wargear.name">
-                        [[wargear]]
-                    </div>
-                </div>
-            </div>
-
-            <button v-on:click="addUnit">Add Unit</button>
+        </div>
+        <div>
+            [[pointTotal]]
         </div>
         <div v-for="unit in armyList">
             <h3>[[unit.name]]</h3>
-            <img v-bind:src="[[unit.image]]"/>
+                <div class="d-flex align-items-start">
+                    <h6>M:</h6><p> [[unit.movement]]</p>
+                    <h6>WS:</h6><p>+[[unit.weapon_skill]]</p>
+                    <h6>BS:</h6><p>+[[unit.ballistic_skill]]</p>
+                    <h6>S:</h6><p>[[unit.strength]]</p>
+                    <h6>T:</h6><p>[[unit.toughness]]</p>
+                    <h6>W:</h6><p>[[unit.wounds]]</p>
+                    <h6>A:</h6><p>[[unit.attacks]]</p>
+                    <h6>Ld:</h6><p>[[unit.leadership]]</p>
+                    <h6>Sv:</h6><p>[[unit.armor_save]]</p>
+                </div>
+                <h5>Fixed Wargear</h5>
+                <div v-for="weapon in unit.wargear">
+                    <div v-for="wargear in imperialKnightsWargearList">
+                        <div v-if="weapon === wargear.name">
+                            <p>[[wargear.name]]</p>
+                        </div>
+                    </div>
+                </div>
+                <h5>Optional Wargear</h5>
+                <div v-for="weapon in unit.optional_wargear">
+                    <div v-for="wargear in imperialKnightsWargearList">
+                        <div v-if="weapon === wargear.name">
+                            <p>[[wargear.name]]</p>
+                        </div>
+                    </div>
+                </div>
+                <h6>Abilities:</h6><p>[[unit.abilities]]</p>
             <button v-on:click="removeUnit">Remove Unit</button>
         </div>
     </div>
 </body>
 <script src="static/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </html>

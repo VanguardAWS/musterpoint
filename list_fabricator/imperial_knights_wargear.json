@@ -49,6 +49,176 @@
             "damage": "1",
             "abilities": "-",
             "point_value": 0
+        },
+        {
+            "name": "preceptor multi-laser",
+            "range": "36",
+            "type": "heavy 4",
+            "strength": "6",
+            "armor_penetration": 0,
+            "damage": "1",
+            "abilities": "-",
+            "point_value": 0
+        },
+        {
+            "name": "heavy flamer",
+            "range": "12",
+            "type": "heavy D6",
+            "strength": "5",
+            "armor_penetration": 1,
+            "damage": "1",
+            "abilities": "Each time an attack is made with this weapon, that attack automatically hits the target.",
+            "point_value": 0
+        },
+        {
+            "name": "thermal cannon",
+            "range": "30",
+            "type": "heavy 2D3",
+            "strength": "9",
+            "armor_penetration": 4,
+            "damage": "D6+2",
+            "abilities": "Each time an attack made with this weapon targets a unit within half range, that attack has a damage characteristic of D6+4.",
+            "point_value": 0
+        },
+        {
+            "name": "avenger gatling cannon",
+            "range": "36",
+            "type": "heavy 12",
+            "strength": "6",
+            "armor_penetration": 2,
+            "damage": "2",
+            "abilities": "-",
+            "point_value": 0
+        },
+        {
+            "name": "rapid-fire battle cannon",
+            "range": "72",
+            "type": "heavy 2D6",
+            "strength": "8",
+            "armor_penetration": 2,
+            "damage": "3",
+            "abilities": "Blast",
+            "point_value": 0
+        },
+        {
+            "name": "las-impulsor",
+            "range": "36",
+            "type": "heavy 2D6",
+            "strength": "6",
+            "armor_penetration": 2,
+            "damage": "2",
+            "abilities": "Blast",
+            "point_value": 0
+        },
+        {
+            "name": "plasma decimator",
+            "range": "48",
+            "type": "heavy 2D6",
+            "strength": "8",
+            "armor_penetration": 4,
+            "damage": "2",
+            "abilities": "Blast",
+            "point_value": 0
+        },
+        {
+            "name": "volcano lance",
+            "range": "80",
+            "type": "heavy D3",
+            "strength": "16",
+            "armor_penetration": 5,
+            "damage": "D6+8",
+            "abilities": "Blast",
+            "point_value": 0
+        },
+        {
+            "name": "conflagration cannon",
+            "range": "18",
+            "type": "heavy 3D3",
+            "strength": "7",
+            "armor_penetration": 2,
+            "damage": "2",
+            "abilities": "Each time an attack is made with this weapon, that attack automatically hits the target.",
+            "point_value": 0
+        },
+        {
+            "name": "thundercoil harpoon",
+            "range": "18",
+            "type": "heavy 1",
+            "strength": "16",
+            "armor_penetration": 6,
+            "damage": "10",
+            "abilities": "Each time an attack is made with this weapon against an MONSTER or VEHICLE unit (excluding AIRCRAFT), add 1 to that attack's hit roll. Each time an attack made with this weapon is allocated to a model, that model's unit suffers 3 mortal wounds in addition to the normal damage.",
+            "point_value": 0
+        },
+        {
+            "name": "shieldbreaker missile",
+            "range": "48",
+            "type": "heavy 1",
+            "strength": "10",
+            "armor_penetration": 4,
+            "damage": "D6",
+            "abilities": "Each time the bearer is selected to shoot, it can only make attacks with one shieldbreaker missile, and it can only shoot each shieldbreaker missile it is equipped with once per battle. Each time an attack is made with this weapon, invulnerable saving throws cannot be made against that attack.",
+            "point_value": 0
+        },
+        {
+            "name": "twin siegebreaker cannon",
+            "range": "36",
+            "type": "heavy 2D3",
+            "strength": "7",
+            "armor_penetration": 1,
+            "damage": "2",
+            "abilities": "Blast",
+            "point_value": 0
+        },
+        {
+            "name": "twin meltagun",
+            "range": "12",
+            "type": "assault 2",
+            "strength": "8",
+            "armor_penetration": 4,
+            "damage": "D6",
+            "abilities": "Each time an attack made with this weapon targets a unit within half range, that attack has a Damage characteristic of D6+2.",
+            "point_value": 0
+        },
+        {
+            "name": "reaper chainsword",
+            "range": "melee",
+            "type": "melee",
+            "strength": "+6",
+            "armor_penetration": 4,
+            "damage": "6",
+            "abilities": "-",
+            "point_value": 0
+        },
+        {
+            "name": "thunderstrike gauntlet",
+            "range": "melee",
+            "type": "melee",
+            "strength": "x2",
+            "armor_penetration": 3,
+            "damage": "8",
+            "abilities": "-",
+            "point_value": 0
+        },
+        {
+            "name": "titanic feet",
+            "range": "melee",
+            "type": "melee",
+            "strength": "user",
+            "armor_penetration": 2,
+            "damage": "2",
+            "abilities": "-",
+            "point_value": 0
+        },
+        {
+            "name": "freedom's hand",
+            "range": "melee",
+            "type": "melee",
+            "strength": "x2",
+            "armor_penetration": 4,
+            "damage": "8",
+            "abilities": "ach time an attack is made with this weapon profile, an unmodified wound roll of 6 inflicts D3 mortal wounds on the target in addition to the normal damage.",
+            "point_value": 0
         }
     ]
 }

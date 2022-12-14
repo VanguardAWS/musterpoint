@@ -5,6 +5,7 @@ let imperialKnightsUnits = new Vue({
     imperialKnightsUnitsList: [],
     imperialKnightsWargearList: [],
     armyList: [],
+    pointTotal: 0,
     },
     methods: {
     getImperialKnightsUnits: function() {
@@ -21,9 +22,10 @@ let imperialKnightsUnits = new Vue({
             
         }).then(res => this.imperialKnightsWargearList = res.data)
     },       
-    addUnit: function() {
-        let currentUnit = this.imperialKnightsUnitsList
-        this.armyList.push(currentUnit[0])
+    addUnit: function(index) {
+        let currentUnit = this.imperialKnightsUnitsList[index]
+        this.pointTotal = currentUnit.point_value + this.pointTotal
+        this.armyList.push(currentUnit)
     },
     removeUnit: function(unit){
         let currentUnit = this.imperialKnightsUnitsList
@@ -35,5 +37,3 @@ let imperialKnightsUnits = new Vue({
         this.getImperialKnightsUnits()
     }
 });
-
-
