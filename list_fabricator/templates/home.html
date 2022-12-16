@@ -6,106 +6,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://kit.fontawesome.com/de072b3707.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>List Fabricator</title>
+    <title>MusterPoint</title>
 </head>
 <body>
-    
-    <div class="container-md" id="api">
-        <h1 class="fs-1">List Fabricator</h1>
+    <div class="container-xl" id="api">
+        <br>
+        <h1 class="display-1" class="text-center">MusterPoint</h1>
+        <br>
         <div v-if="listComplete === false">
             <div class="d-flex flex-wrap">
                 <div v-for="unit in imperialKnightsUnitsList">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card text-center" class="d-flex justify-content-evenly" class="card-group" style="width: 14rem;">
                         <div class="card-body">
                             <img class="card-img-top" v-bind:src="[[unit.image]]"/>
-                            <h3 class="card-title">[[unit.name]]</h3>
-                            <h6>Point Value: [[unit.point_value]]</h6>
-                            <button v-on:click="addUnit(unit)">Add Unit</button>
+                            <p class="card-title">[[unit.name]]</p>
+                            <p class="card-subtitle mb-2 text-muted">Points: [[unit.point_value]]</p>
+                            <button v-on:click="addUnit(unit)"><i class="fa-sharp fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
+            <br>
             <div>
-                <h2>Army List</h2>
+                <h2 class="display-3">Army List</h2>
             </div>
             <div>
                 [[pointTotal]]
             </div>
-            <div v-for="(unit,index) in armyList">
-                <h3>[[unit.name]]</h3>
-                    <div class="d-flex align-items-start">
-                        <h6>Points:</h6><p> [[unit.point_value]]<p>
-                        <h6>M:</h6><p> [[unit.movement]]</p>
-                        <h6>WS:</h6><p>+[[unit.weapon_skill]]</p>
-                        <h6>BS:</h6><p>+[[unit.ballistic_skill]]</p>
-                        <h6>S:</h6><p>[[unit.strength]]</p>
-                        <h6>T:</h6><p>[[unit.toughness]]</p>
-                        <h6>W:</h6><p>[[unit.wounds]]</p>
-                        <h6>A:</h6><p>[[unit.attacks]]</p>
-                        <h6>Ld:</h6><p>[[unit.leadership]]</p>
-                        <h6>Sv:</h6><p>[[unit.armor_save]]</p>
-                    </div>
-                    <h5>Equiped Weapons</h5>
-                    <div v-for="(weapon, wargearindex) in unit.wargear">
-                        <div v-for="wargear in imperialKnightsWargearList">
-                            <div v-if="weapon === wargear.name"> {% comment %} prints weapon if the string matches the name of a weapon in the wargear list {% endcomment %}
-                                <p>[[weapon]]</p>
-                                <div v-for="(weapon, weaponindex) in unit.optional_wargear">
-                                    <div v-if="weapon === wargear.name">
-                                        <button v-on:click="removeWeapon(unit, index, wargear, wargearindex)">-</button>
+            <div class="d-flex flex-wrap">
+                <div v-for="(unit,index) in armyList">
+                    <div class="card mb-3" class="card-group" style="max-width: 300px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img v-bind:src="[[unit.image]]" class="img-fluid rounded-start">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body"><button button class="float-end" v-on:click="removeUnit(index)"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+                                <h5 class="card-title">[[unit.name]]</h5>
+                                <p class="card-subtitle">Equiped Weapons:</p>
+                                <div v-for="(weapon, wargearindex) in unit.wargear">
+                                    <div v-for="wargear in imperialKnightsWargearList">
+                                        <div v-if="weapon === wargear.name"> {% comment %} prints weapon if the string matches the name of a weapon in the wargear list {% endcomment %}
+                                            <small class="card-text" class="text-muted">[[weapon]]</small>
+                                            <div v-for="(weapon, weaponindex) in unit.optional_wargear">
+                                                <div v-if="weapon === wargear.name">
+                                                    <p class="card-text"><small class="text-muted">Points: [[wargear.point_value]]<button class="float-end" v-on:click="removeWeapon(unit, index, wargear, wargearindex)"><i class="fa-sharp fa-solid fa-minus"></i></button></small></p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <p class="card-subtitle">Optional Weapons:</p>
+                                <div v-for="(weapon, weaponindex) in unit.optional_wargear">
+                                    <div v-for="wargear in imperialKnightsWargearList"> {% comment %} prints weapon if the string matches the name of a weapon in the wargear list {% endcomment %}
+                                        <div v-if="weapon === wargear.name">
+                                            <p class="card-text"><small class="text-muted">[[weapon]] <br>Points: [[wargear.point_value]]<button class="float-end" v-on:click="addWeapon(unit, weapon, wargear, weaponindex)"><i class="fa-sharp fa-solid fa-plus"></i></button></small></p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">Points: [[unit.point_value]]</small>
                             </div>
                         </div>
                     </div>
-                    <h5>Additional Weapons</h5>
-                    <div v-for="(weapon, weaponindex) in unit.optional_wargear">
-                        <div v-for="wargear in imperialKnightsWargearList"> {% comment %} prints weapon if the string matches the name of a weapon in the wargear list {% endcomment %}
-                            <div v-if="weapon === wargear.name">
-                                <p>[[weapon]]<br>
-                                    points: [[wargear.point_value]]</p>
-                                <button v-on:click="addWeapon(unit, weapon, wargear, weaponindex)">+</button>
-                            </div>
-                        </div>
-                    </div>
-                <button v-on:click="removeUnit(index)">Remove Unit</button>
+                </div>
             </div>
             <button v-on:click="finishList">Complete List</button>
         </div>
         <div v-if="listComplete === true">
             <p>Point Total: [[finalPointTotal]]</p>
-            [[completedArmyList]]
             <div v-for="unit in completedArmyList">
-                <div>
-                    <h4>[[unit.name]]</h4>
-                    <h6>M:</h6><p> [[unit.movement]]</p>
-                    <h6>WS:</h6><p>+[[unit.weapon_skill]]</p>
-                    <h6>BS:</h6><p>+[[unit.ballistic_skill]]</p>
-                    <h6>S:</h6><p>[[unit.strength]]</p>
-                    <h6>T:</h6><p>[[unit.toughness]]</p>
-                    <h6>W:</h6><p>[[unit.wounds]]</p>
-                    <h6>A:</h6><p>[[unit.attacks]]</p>
-                    <h6>Ld:</h6><p>[[unit.leadership]]</p>
-                    <h6>Sv:</h6><p>[[unit.armor_save]]</p>
-                </div>
-                <div v-for="(weapon) in unit.wargear">
+                <h3 class="float-start" class="text-capitalize">[[unit.name]]</h3><h3 class="float-end">Points: [[unit.point_value]]</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-secondary">
+                            <th scope="col">M</th>
+                            <th scope="col">WS</th>
+                            <th scope="col">BS</th>
+                            <th scope="col">S</th>
+                            <th scope="col">T</th>
+                            <th scope="col">W</th>
+                            <th scope="col">A</th>
+                            <th scope="col">Ld</th>
+                            <th scope="col">Sv</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>[[unit.movement]]"</td>
+                            <td>[[unit.weapon_skill]]+</td>
+                            <td>[[unit.ballistic_skill]]+</td>
+                            <td>[[unit.strength]]</td>
+                            <td>[[unit.toughness]]</td>
+                            <td>[[unit.wounds]]</td>
+                            <td>[[unit.attacks]]</td>
+                            <td>[[unit.leadership]]</td>
+                            <td>[[unit.armor_save]]+</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div v-for="weapon in unit.wargear">
                     <div v-for="wargear in imperialKnightsWargearList">
-                        <div v-if="weapon === wargear.name"> {% comment %} prints weapon if the string matches the name of a weapon in the wargear list {% endcomment %}
-                            <h5>[[weapon]]</h5>
-                            <p>Points: [[wargear.point_value]]</p>
-                            <p>Range: [[wargear.range]]</p>
-                            <p>Weapon Type: [[wargear.type]]</p>
-                            <p>S: [[wargear.strength]]</p>
-                            <p>AP: -[[wargear.armor_penetration]]</p>
-                            <p>D: [[wargear.damage]]</p>
-                            <p>Special Rules: [[wargear.abilities]]</p>
+                        <div v-if="weapon === wargear.name">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="table-secondary">
+                                        <th scope="col">Weapon</th>
+                                        <th scope="col">Range</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">S</th>
+                                        <th scope="col">AP</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">Abilities</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>[[wargear.name]]</td>
+                                        <td>[[wargear.range]]"</td>
+                                        <td>[[wargear.type]]</td>
+                                        <td>[[wargear.strength]]</td>
+                                        <td>-[[wargear.armor_penetration]]</td>
+                                        <td>[[wargear.damage]]</td>
+                                        <td>[[wargear.abilities]]</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
+                <hr>
             </div>
             <button v-on:click="editList">Edit List</button>
         </div>
+        <br>
+        <br>
+        <br>
     </div>
 </body>
 <script src="static/site.js"></script>
