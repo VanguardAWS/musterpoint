@@ -252,7 +252,7 @@
             "attacks": 5,
             "leadership": 9,
             "armor_save": 3,
-            "abilities": "ion shields, super-heavy walker, mentor,, sir hekhtur, code chivalric, explodes, chainbreaker, legendary freeblade",
+            "abilities": "ion shields, super-heavy walker, mentor, sir hekhtur, code chivalric, explodes, chainbreaker, legendary freeblade",
             "point_value": 440,
             "wargear": [
                 "hekhtur's pistol",
@@ -264,6 +264,31 @@
             "optional_wargear": [
             ],
             "image": "https://www.games-workshop.com/resources/catalog/product/920x950/99120108017_PreceptorLead.jpg"
+        },
+        {
+            "role": "lord of war",
+            "quantity": 1,
+            "name": "acastus knight aterius",
+            "movement": 8,
+            "weapon_skill": 4,
+            "ballistic_skill": 3,
+            "strength": 8,
+            "toughness": 8,
+            "wounds": 30,
+            "attacks": 3,
+            "leadership": 9,
+            "armor_save": 3,
+            "abilities": "ion shields, super-heavy walker, code chivalric, explodes",
+            "point_value": 750,
+            "wargear": [
+                "asterius volkite culverin",
+                "karacnos mortar battery",
+                "twin conversion beam cannon",
+                "titanic feet"
+            ],
+            "optional_wargear": [
+            ],
+            "image": "https://www.forgeworld.co.uk/resources/catalog/product/920x950/99560108209_AcastusKnightAsterius01.jpg"
         }
     ]
 }
