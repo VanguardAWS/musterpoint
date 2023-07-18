@@ -1,1 +1,0 @@
-web: gunicorn list_fabricator_project.wsgi --log-file-
